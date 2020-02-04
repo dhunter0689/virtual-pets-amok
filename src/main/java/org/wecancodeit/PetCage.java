@@ -8,5 +8,10 @@ public class PetCage {
 	public int getCageLevel() {
 		return CageLevel;
 	}
+
+	public void addpoop(int amount) {
+		CageLevel += 1;
+		
+	}
 	
 }

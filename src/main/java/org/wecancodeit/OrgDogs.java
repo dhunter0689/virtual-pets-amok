@@ -15,5 +15,10 @@ public class OrgDogs extends OrganicPets {
 	public void goWalk() {
 		 setBoredom(getBoredom() - 1);
 	}
+
+	public void goPotty(PetCage cage) {
+		cage.addpoop(1);
+		
+	}
 	
 }
