@@ -33,34 +33,55 @@ public class VirtualPetShelter {
 	}
 
 	public void cleanPetCage() {
-		for(ShelterPets pet : pets()) {
-			if(pet instanceof OrgDogs) {
+		for (ShelterPets pet : pets()) {
+			if (pet instanceof OrgDogs) {
 				((OrgDogs) pet).cleanPetCage();
 			}
 		}
 	}
-	
+
 	public void walkDogs() {
 		for (ShelterPets pet : pets()) {
 			if (pet instanceof OrgDogs) {
-				((OrgDogs)pet).goWalk();
+				((OrgDogs) pet).goWalk();
 			}
 		}
 	}
-	
+
 	public void feedAllOrganic() {
 		for (ShelterPets pet : pets()) {
 			if (pet instanceof OrganicPets) {
-				((OrganicPets)pet).eat();
+				((OrganicPets) pet).eat();
 			}
 		}
 	}
-	
+
 	public void giveWaterAllOrganic() {
 		for (ShelterPets pet : pets()) {
-			if(pet instanceof OrganicPets) {
-				((OrganicPets)pet).drink();
+			if (pet instanceof OrganicPets) {
+				((OrganicPets) pet).drink();
 			}
 		}
+	}
+
+	public void tick(int litBoxClean) {
+		for (ShelterPets pet : pets()) {
+			if (pet instanceof OrgCats) {
+				pet.tick();
+				litBoxClean += 3;
+			}
+		}
+	}
+
+	public ShelterPets getPet(String name) {
+		return virtualPets.get(name);
+	}
+	
+	public void playWithOne(ShelterPets playWithOnePet) {
+		playWithOnePet.play();
+	}
+	
+	public void adoptPet(ShelterPets pet) {
+		virtualPets.remove(pet.getName());
 	}
 }
