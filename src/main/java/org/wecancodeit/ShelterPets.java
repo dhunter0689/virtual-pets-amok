@@ -13,7 +13,7 @@ public class ShelterPets {
 	private int thirst;
 	private int boredom;
 	private int hygiene;
-	private int health;
+	protected int health;
 	private int energy;
 	private int potty;
 

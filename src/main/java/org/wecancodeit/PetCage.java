@@ -3,14 +3,14 @@ package org.wecancodeit;
 public class PetCage {
 //monitors poop levels of Dogs and birds
 	
-	private int CageLevel;
+	private int cageLevel;
 
 	public int getCageLevel() {
-		return CageLevel;
+		return cageLevel;
 	}
 
 	public void addpoop(int amount) {
-		CageLevel += 1;
+		cageLevel += 1;
 		
 	}
 	
