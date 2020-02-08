@@ -4,6 +4,10 @@ public class OrgDogs extends OrganicPets {
 
 	private int cageLevel;
 
+	public OrgDogs(String name, String description) {
+		
+	}
+
 	@Override
 	public void makeNoise() {
 		bark();
@@ -35,6 +39,10 @@ public class OrgDogs extends OrganicPets {
 
 	public void setCageLevel(int cageLevel) {
 		this.cageLevel = cageLevel;
+	}
+
+	public void decreaseHealth() {
+		health -=2;
 	}
 	
 }

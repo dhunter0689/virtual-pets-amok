@@ -3,6 +3,7 @@ package org.wecancodeit;
 public class RoboticPets {
 
 	private int oil;
+	private String name;
 
 	public void setOil(int oil) {
 		this.oil = oil;
@@ -20,6 +21,11 @@ public class RoboticPets {
 	public void makeNoise() {
 		System.out.println("");
 		
+	}
+
+	public String getName() {
+		
+		return name;
 	}
 
 }

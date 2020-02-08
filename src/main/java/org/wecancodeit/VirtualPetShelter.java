@@ -20,6 +20,8 @@ public class VirtualPetShelter {
 
 	LitterBox litterBox = new LitterBox();
 
+	private int litBoxClean;
+
 	public void getLitBoxClean() {
 		litterBox.getLitBoxClean();
 	}
@@ -83,5 +85,26 @@ public class VirtualPetShelter {
 	
 	public void adoptPet(ShelterPets pet) {
 		virtualPets.remove(pet.getName());
+	}
+	
+	public void foundPet(ShelterPets pet) {
+		virtualPets.put(pet.getName(), (ShelterPets) pet);
+		}
+	
+	public void foundPet(RoboticPets pet) {
+		roboticanimals.put(pet.getName(), (RoboticPets) pet);
+	}
+	
+	public void foundPet(OrganicPets pet) {
+		virtualPets.put(pet.getName(), (ShelterPets) pet);  
+	}
+
+	public int litBoxClean() {
+		return litBoxClean;
+	}
+
+	public void tick() {
+		
+		
 	}
 }
